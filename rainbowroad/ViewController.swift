@@ -45,25 +45,16 @@ class ViewController: UIViewController, UITableViewDelegate {
 }
 
 extension ViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         return colors.count
     }
-    //func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> Int {
-    //    return cell_height
-    //}
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
-        //cell.height? =
         cell.backgroundColor = self.colors[indexPath.row]
         return cell
     }
-    //func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-    //    print("here")
-    //    cell.contentView.backgroundColor = colors[indexPath.row]
-    //}
-    //func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    //    let cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath)
-        
-    //    cell.tex
-    //}
 }
